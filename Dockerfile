@@ -1,3 +1,3 @@
-FROM docker/compose:1.24.0
+FROM debian:buster
 
-RUN apk add openssh-client git git-lfs
+RUN apt-get -yqq update && apt-get install -yqq openssh-client git git-lfs curl docker docker-compose
